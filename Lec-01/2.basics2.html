@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>H<sub>2</sub>O</p>
+  <p>
+    (a+b)<sup>2</sup> = a<sup>2</sup> + b<sup>2</sup> + 2ab
+  </p>
+
+  <h2>Largest element in an Array</h2>
+  <code>
+    <pre>
+        #include <iostream>
+        #include <vector>
+        using namespace std;
+        
+        // Function to find the maximum of array
+        int largest(const vector<int>& arr)
+        {
+            int max = arr[0];
+        
+            // Traverse vector elements
+            // from second and compare
+            // every element with current max
+            for (int i = 1; i < arr.size(); i++)
+                if (arr[i] > max)
+                    max = arr[i];
+        
+            return max;
+        }
+        
+        // Driver Code
+        int main()
+        {
+            vector<int> arr = {10, 324, 45, 90, 9808};
+            cout << "Largest in given array is " << largest(arr);
+            return 0;
+        }
+    </pre>
+  </code>
+</body>
+</html>
