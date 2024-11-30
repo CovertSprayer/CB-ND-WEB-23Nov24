@@ -1,0 +1,39 @@
+/* --------------- universal selector */
+
+/* *{
+  color: blue;
+} */
+
+/* --------------- element selector */
+/* p{
+  color: blue;
+}
+
+h1{
+  color: orange;
+} */
+
+/* ------------------- id selectors */
+/* #special-para{
+  color: red;
+} */
+/* 
+#orange, #green{
+  color: aqua;
+} */
+
+/* -------------------- class selectors */
+/* .color{
+  color: red;
+} */
+
+/* attribute selector */
+
+a[href="https://www.facebook.com"]{
+  color:lightgreen;
+}
+
+p[id="special-para"]{
+  color: orange;
+}
+
