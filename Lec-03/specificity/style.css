@@ -1,0 +1,17 @@
+/* id > class > element > universal */
+
+/* .para{
+  color: orange;
+} */
+
+/* p{
+  color: red;
+} */
+
+#special{
+  color: green;
+}
+
+/* *{
+  color: blue;
+} */

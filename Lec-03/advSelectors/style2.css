@@ -1,0 +1,64 @@
+
+/* a{
+  color: red;
+} */
+
+a:link{
+  color: greenyellow;
+}
+
+a:visited{
+  color: red;
+}
+
+a:hover{
+  color: darkgreen;
+}
+
+a:active{
+  color: blue;
+}
+
+/* p:hover{
+  border: 2px solid red;
+} */
+
+input:focus{
+  border: 4px solid red;
+  /* font-size: 4rem; */
+}
+
+/* li:first-child{
+  color: red;
+}
+
+li:last-child{
+  color: green;
+} */
+
+li:nth-child(2n + 1){
+  /* color: red; */
+  background-color: gray;
+}
+
+li:nth-child(2n){
+  background-color: rgba(128, 128, 128, 0.478);
+}
+
+
+/* ------------- pseudo elements */
+/* p::first-letter{
+  font-size: 120px;
+} */
+
+/* p::first-line{
+  text-decoration: underline;
+} */
+
+li::after{
+  content: '💛';
+}
+
+li::before{
+  content: '💥';
+}

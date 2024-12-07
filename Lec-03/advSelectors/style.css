@@ -1,0 +1,44 @@
+/* span{
+  color: red;
+} */
+
+/* 1. descendent combinator */
+/* 2. child combinator (>) */
+/* 3. next immediate sibling (+) */
+/* 4. next general sibling (~) */
+
+/* 1. -------------------- descendent combinator */
+
+/* div p span{
+  color: red;
+} */
+
+/* p span{
+  color: red;
+} */
+
+
+/* 2. ----------------- child combinator (>) */
+
+/* div > p{
+  color: red;
+} */
+
+
+/* 3. ----------------- next immediate sibling (+) */
+
+/* p+span{
+  color: red;
+} */
+
+p + span + span{
+  color: red;
+}
+
+
+/* 4. ----------------- next general sibling (~) */
+
+/* p ~ span{
+  color: red;
+} */
+
