@@ -1,0 +1,33 @@
+p{
+  /* default */
+  /* position: static;  */
+  border: 2px solid red;
+}
+
+#rel{
+  background-color: yellow;
+  position: relative;
+  top: 25px;
+  /* bottom: 30px; */
+  left: 45px;
+}
+
+.container-2{
+  position: relative;
+  border: 2px solid green;
+}
+
+#abs1, #abs2{
+  position: absolute;
+  top: 10px;
+  background-color: orange;
+}
+
+#abs1{
+  z-index: 10;
+}
+
+#abs2{
+  background-color: red;
+  z-index: -20;
+}
