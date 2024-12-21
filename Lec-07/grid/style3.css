@@ -1,0 +1,15 @@
+/* fraction unit */
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.child{
+  font-size: 3rem;
+  background-color: aqua;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
