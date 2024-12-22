@@ -1,0 +1,41 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  perspective: 1000px;
+}
+
+.card{
+  margin: 40px auto;
+  border: 2px solid black;
+  width: 300px;
+  height: 360px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition-duration: 1s;
+}
+
+.card:hover{
+  transform: rotateY(180deg);
+}
+
+.side-a{
+  /* background-color: orange; */
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRALCPBonzADLn4bEz6O8Gmb_GfbzewTTZIkg&s');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.side-b{
+  background-color: yellow;
+  height: 100%;
+  font-size: 2rem;
+  transform: rotateY(180deg);
+  position: absolute;
+  backface-visibility: hidden;
+}
