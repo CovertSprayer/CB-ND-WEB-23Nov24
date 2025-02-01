@@ -1,0 +1,54 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Comic Sans MS";
+  background-color: #f1f4f8;
+}
+
+.container{
+  width: 308px;
+  border: 2px solid black;
+  margin: 60px auto;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 6px gray;
+  background-color: white;
+
+  h1{
+    text-align: center;
+  }
+
+  input.screen{
+    height: 40px;
+    border: 2px solid black;
+    margin: 10px 0; 
+    width: 100%;
+    padding: 6px;
+  }
+
+  table td{
+    border: 2px solid black;
+    padding: 10px 24px;
+    transition-duration: 800ms;
+    
+  }
+
+  table td:hover{
+    background-color: #f1f4f8;
+  }
+}
+
+@keyframes bounce{
+  50%{
+    transform: scale(0.8);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+
