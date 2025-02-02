@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      border: 2px solid black;
+    }
+    .parent{
+      background-color: orange;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      min-height: 100vh;
+    }
+
+    .child{
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+      font-size: 40px;
+    }
+  </style>
+</head>
+<body>
+  <input type="text">
+  <button>Add Item</button>
+  <div class="parent">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+  </div>
+
+  <script src="script2.js"></script>
+</body>
+</html>
