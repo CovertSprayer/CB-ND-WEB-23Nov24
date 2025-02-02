@@ -1,0 +1,48 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  max-width: 450px;
+  border: 2px solid black;
+  margin: 40px auto;
+
+  h1{
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.2rem;
+  }
+
+  .inputs{
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    input{
+      padding: 6px;
+      font-size: 1.2rem;
+    }
+
+    button{
+      width: 80px;
+      cursor: pointer;
+    }
+  }
+
+  .todo-list{
+    /* border: 2px solid red; */
+    padding: 10px 30px;
+
+    .todo{
+      font-size: 1.2rem;
+      /* border: 2px solid green; */
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+    }
+  }
+}
+
