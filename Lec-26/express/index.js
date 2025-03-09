@@ -3,8 +3,8 @@ const app = express();
 const path = require('path');
 
 // method - get, post, put, patch, delete
-// route/endpoint - "/", "/login", "/signup", "/a/b/c/d"
-// controller/hander
+// route/endpoint/path - "/", "/login", "/signup", "/a/b/c/d"
+// controller/handler
 
 app.get("/", (req, res)=>{
   // res.send("<h1>Hello from Home page!!</h1>");

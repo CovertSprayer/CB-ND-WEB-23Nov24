@@ -40,6 +40,18 @@ app.get("/users/:id", (req, res) => {
   res.json(user);
 })
 
+// query parameter
+app.get('/search', (req, res) => {
+  console.log(req.query);
+  const username = req.query.username;
+  if(!username) {
+    return res.send("Not a valid query!");
+  }
+  const user = users.find(user => user.username == username);
+  res.json(user);
+  // res.send("hello from search route");
+})
+
 
 app.delete("/", (req, res) =>{
   // res.send("hello from delete req");
