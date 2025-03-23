@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/CSS/index.css">
+</head>
+<body>
+  <a href="/todos/new">Add todo</a>
+  <h1>List of Todos</h1>
+  <ul>
+    <% for( let todo of todos ) { %>
+      <li>
+        <span><%= todo.text %></span>
+        <a href="/todos/<%= todo.id %>">show</a>
+        <a href="/todos/<%= todo.id %>/edit">Edit</a>
+        <!-- <a href="/todos/<%= todo.id %>?_method=DELETE">Delete</a> -->
+         <form style="display: inline;" action="/todos/<%= todo.id %>?_method=DELETE" method="post">
+          <button>Delete</button>
+         </form>
+        <!-- <a href="/todos/todo.id">show</a> -->
+      </li>
+    <% } %>
+  </ul>
+
+  <script src="/JS/index.js"></script>
+</body>
+</html>
