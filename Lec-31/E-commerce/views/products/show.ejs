@@ -1,0 +1,37 @@
+<% layout('layouts/boilerplate') -%>
+
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <div class="card mx-auto" style="width: 18rem;">
+        <img src="<%= product.image %>" height="200px" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= product.title %></h5>
+          <p>₹ <%= product.price %></p>
+          <p class="card-text"><%= product.description %></p>
+          <a href="#" class="btn btn-sm btn-primary">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6">
+      <h2>Reviews</h2>
+      <div class="mb-3 w-50">
+        <form method="post" action="/products/<%= product._id %>/reviews">
+          <fieldset class="starability-basic">
+            <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="0" checked aria-label="No rating." />
+            <input type="radio" id="first-rate1" name="rating" value="1" />
+            <label for="first-rate1" title="Terrible">1 star</label>
+            <input type="radio" id="first-rate2" name="rating" value="2" />
+            <label for="first-rate2" title="Not good">2 stars</label>
+            <input type="radio" id="first-rate3" name="rating" value="3" />
+            <label for="first-rate3" title="Average">3 stars</label>
+            <input type="radio" id="first-rate4" name="rating" value="4" />
+            <label for="first-rate4" title="Very good">4 stars</label>
+            <input type="radio" id="first-rate5" name="rating" value="5" />
+            <label for="first-rate5" title="Amazing">5 stars</label>
+          </fieldset>
+          <textarea name="text" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <button class="mt-4 btn btn-success px-3">Post</button>
+        </form>
+      </div>
+    </div>
+  </div>
