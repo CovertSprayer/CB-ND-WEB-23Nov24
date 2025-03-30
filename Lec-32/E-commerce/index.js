@@ -27,6 +27,9 @@ const reviewRoutes = require('./routes/review.routes');
 app.use(productRoutes);
 app.use(reviewRoutes);
 
+app.get("*", (req, res) => {
+  res.render("404.ejs");
+})
 
 const PORT = 8000;
 app.listen(PORT, () => {
