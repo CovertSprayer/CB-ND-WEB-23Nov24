@@ -11,8 +11,11 @@ app.use(express.static("public"));
 io.on('connection', (socket) => {
   console.log("user connected: ", socket.id)
 
-  socket.on("new_msg", (data) => {
-    console.log(data);
+  socket.on("new_msg", (message) => {
+    io.emit("msg", {
+      message: message,
+      socketId: socket.id
+    })
   })
   
 })
