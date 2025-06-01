@@ -2,6 +2,8 @@ import { useState } from "react";
 import Input from "../components/Input";
 import axios from "axios"
 import { useNavigate } from "react-router";
+import API from "../common/api";
+import { registerUser } from "../api/auth";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -41,19 +43,13 @@ const Register = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/register", form);
-      console.log(res.data);
-
-      if(res.data.success){
+      const res = await registerUser(form);
+      if(res.success){
         navigate("/login")
       }
     } catch (error) {
       alert(error.response.data.message || "Something went wrong")
     }
-    
-
-
-
   }
 
   const handleChange = (e) => {
