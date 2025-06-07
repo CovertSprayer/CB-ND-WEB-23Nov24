@@ -18,3 +18,12 @@ export const getBlogs = async () => {
   });
   return res.data;
 }
+
+export const getBlogById = async (blogId) => {
+  const res = await API.get(`/blogs/${blogId}`, {
+    headers: {
+      Authorization: `Bearer ${getToken()}`
+    }
+  });
+  return res.data;
+}

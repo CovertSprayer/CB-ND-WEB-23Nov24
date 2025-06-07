@@ -28,7 +28,13 @@ const Home = () => {
     try {
       const res = await createBlog({title, content});
       if(res.success){
-        
+        console.log(res.data)
+        setTitle("");
+        setContent("");
+        fetchData();
+        // const newBlogs = [...blogs, {...res.data}];
+        // console.log(newBlogs);
+        // setBlogs(prevBlogs => ([...prevBlogs, {...res.data}]));
       }
     } catch (error) {
       alert(error.response.data.message || "Something went wrong!")

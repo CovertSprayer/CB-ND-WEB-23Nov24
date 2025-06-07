@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import { useEffect, useState } from "react";
 import { Navigate } from "react-router";
 import { getUser, isAuthenticated } from "./api/auth";
+import ShowBlog from "./components/ShowBlog";
+import "./App.css"
 
 const App = () => {
   const [auth, setAuth] = useState({ isLoggedIn: false, user: null });
@@ -55,6 +57,7 @@ const App = () => {
           />
           <Route path="/login" element={<Login onLogin={login} />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/blogs/:id" element={<ShowBlog/>} />
         </Routes>
       </main>
     </div>

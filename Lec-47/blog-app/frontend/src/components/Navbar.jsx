@@ -1,9 +1,10 @@
-import { Link } from "react-router"
+import { Link, useNavigate } from "react-router"
 
 const Navbar = ({ auth }) => {
+  const navigate = useNavigate();
   return (
     <nav className='max-w-[1400px] mx-auto flex justify-between items-center px-4 py-3'>
-      <span className='bg-black text-white text-2xl font-bold px-2 py-1 rounded-sm'>CB</span>
+      <span onClick={() => navigate("/")} className='cursor-pointer bg-black text-white text-2xl font-bold px-2 py-1 rounded-sm'>CB</span>
     {/* #EBECFC */}
       <div>
         {auth.isLoggedIn ? 

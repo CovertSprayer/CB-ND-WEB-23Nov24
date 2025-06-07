@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-// import formatDate from "../utils/formatDate";
+import formatDate from "../utils/formatDate";
 import { FaRegBookmark, FaHeart, FaRegComment } from "react-icons/fa";
 
 const BlogCard = ({ blog }) => {
@@ -13,7 +13,7 @@ const BlogCard = ({ blog }) => {
         </div>
         <div>
           <p className="text-sm font-semibold">{blog.author.fullName}</p>
-          <p className="text-xs text-gray-500">{blog.createdAt}</p>
+          <p className="text-xs text-gray-500">{formatDate(blog.createdAt)}</p>
         </div>
       </div>
 

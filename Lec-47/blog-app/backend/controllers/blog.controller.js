@@ -23,7 +23,10 @@ module.exports.findAll = async (req, res) => {
 module.exports.findById = async (req, res) => {
   try {
     const { id } = req.params;
-    const blog = await BlogModel.findById(id);
+    const blog = await BlogModel.findById(id).populate({
+      path: "author",
+      select: "-password"
+    });
     
     res.status(200).json({
       success: true,
